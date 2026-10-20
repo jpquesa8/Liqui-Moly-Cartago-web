@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LIQUI MOLY | Lubricantes y cuidado automotriz</title>
+  <meta name="description" content="Catálogo de productos LIQUI MOLY: aceites de motor, aditivos, grasas, cuidado del vehículo y productos para taller.">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header-content">
+      <a href="#inicio" class="logo">
+        <span class="logo-blue">LIQUI</span> <span class="logo-red">MOLY</span>
+      </a>
+
+      <nav class="nav" id="nav">
+        <a href="#inicio">Inicio</a>
+        <a href="#productos">Productos</a>
+        <a href="#beneficios">Beneficios</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+
+      <button class="menu-btn" id="menuBtn" aria-label="Abrir menú">☰</button>
+    </div>
+  </header>
+
+  <section class="hero" id="inicio">
+    <div class="container hero-content">
+      <p class="hero-tag">Lubricantes de alta tecnología</p>
+      <h1>Protección y rendimiento para tu motor</h1>
+      <p class="hero-text">
+        Descubre aceites de motor, aditivos, grasas y productos de mantenimiento
+        diseñados para vehículos, motocicletas, maquinaria y taller.
+      </p>
+      <div class="hero-buttons">
+        <a href="#productos" class="btn btn-primary">Ver catálogo</a>
+        <a href="#contacto" class="btn btn-outline">Solicitar cotización</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section categories">
+    <div class="container">
+      <h2 class="section-title">Categorías principales</h2>
+      <p class="section-subtitle">
+        LIQUI MOLY ofrece una amplia gama de química automotriz para motor, transmisión,
+        combustible, mantenimiento y taller.
+      </p>
+
+      <div class="category-grid">
+        <article class="category-card">
+          <div class="category-icon">🛢️</div>
+          <h3>Aceites</h3>
+          <p>Aceites de motor y transmisión para distintas viscosidades y tipos de vehículo.</p>
+        </article>
+
+        <article class="category-card">
+          <div class="category-icon">⚗️</div>
+          <h3>Aditivos</h3>
+          <p>Aditivos para combustible, aceite, radiador y limpieza del sistema de inyección.</p>
+        </article>
+
+        <article class="category-card">
+          <div class="category-icon">🧴</div>
+          <h3>Grasas y pastas</h3>
+          <p>Lubricación especializada para rodamientos, chasis, conexiones y alta temperatura.</p>
+        </article>
+
+        <article class="category-card">
+          <div class="category-icon">🚗</div>
+          <h3>Cuidado del vehículo</h3>
+          <p>Limpiadores, siliconas, protectores y productos para plásticos, vidrio y tapicería.</p>
+        </article>
+
+        <article class="category-card">
+          <div class="category-icon">🔧</div>
+          <h3>Taller y reparación</h3>
+          <p>Productos de servicio, selladores, desengrasantes y soluciones para mantenimiento.</p>
+        </article>
+
+        <article class="category-card">
+          <div class="category-icon">🏍️</div>
+          <h3>Motorbike</h3>
+          <p>Lubricantes y cuidado para motocicletas de 2 y 4 tiempos, quads y karts.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section products" id="productos">
+    <div class="container">
+      <h2 class="section-title">Productos destacados</h2>
+      <p class="section-subtitle">
+        Filtra por categoría para encontrar el producto que necesitas.
+      </p>
+
+      <div class="filters">
+        <button class="filter-btn active" data-filter="todos">Todos</button>
+        <button class="filter-btn" data-filter="aceites">Aceites</button>
+        <button class="filter-btn" data-filter="aditivos">Aditivos</button>
+        <button class="filter-btn" data-filter="grasas">Grasas</button>
+        <button class="filter-btn" data-filter="cuidado">Cuidado</button>
+        <button class="filter-btn" data-filter="taller">Taller</button>
+      </div>
+
+      <div class="product-grid" id="productGrid">
+
+        <article class="product-card" data-category="aceites">
+          <div class="product-image oil"></div>
+          <div class="product-info">
+            <span class="product-tag">Aceite de motor</span>
+            <h3>Top Tec 4200 5W-30</h3>
+            <p>Aceite sintético de alta tecnología para motores modernos de gasolina y diésel.</p>
+            <div class="product-footer">
+              <span class="price">₡ 28 500</span>
+              <button class="btn-small" data-product="Top Tec 4200 5W-30">Cotizar</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="aceites">
+          <div class="product-image oil"></div>
+          <div class="product-info">
+            <span class="product-tag">Aceite de motor</span>
+            <h3>Molygen New Generation 5W-40</h3>
+            <p>Aceite sintético con tecnología MOLYGEN para reducir fricción y desgaste.</p>
+            <div class="product-footer">
+              <span class="price">₡ 31 900</span>
+              <button class="btn-small" data-product="Molygen New Generation 5W-40">Cotizar</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="aditivos">
+          <div class="product-image additive"></div>
+          <div class="product-info">
+            <span class="product-tag">Aditivo</span>
+            <h3>MoS2 Shooter</h3>
+            <p>Aditivo con bisulfuro de molibdeno para reducir la fricción y proteger el motor.</p>
+            <div class="product-footer">
+              <span class="price">₡ 12 750</span>
+              <button class="btn-small" data-product="MoS2 Shooter">Cotizar</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="aditivos">
+          <div class="product-image additive"></div>
+          <div class="product-info">
+            <span class="product-tag">Combustible</span>
+            <h3>Limpiador de inyección</h3>
+            <p>Ayuda a limpiar el sistema de inyección y mantener el rendimiento del motor.</p>
+            <div class="product-footer">
+              <span class="price">₡ 9 990</span>
+              <button class="btn-small" data-product="Limpiador de inyección">Cotizar</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="grasas">
+          <div class="product-image grease"></div>
+          <div class="product-info">
+            <span class="product-tag">Grasa</span>
+            <h3>Grasa multiusos</h3>
+            <p>Grasa lubricante para uso general en chasis, rodamientos y conexiones.</p>
+            <div class="product-footer">
+              <span class="price">₡ 8 450</span>
+              <button class="btn-small" data-product="Grasa multiusos">Cotizar</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="cuidado">
+          <div class="product-image care"></div>
+          <div class="product-info">
+            <span class="product-tag">Cuidado</span>
+            <h3>Limpiador de plásticos</h3>
+            <p>Limpia y renueva superficies plásticas del interior y exterior del vehículo.</p>
+            <div class="product-footer">
+              <span class="price">₡ 7 300</span>
+              <button class="btn-small" data-product="Limpiador de plásticos">Cotizar</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="taller">
+          <div class="product-image workshop"></div>
+          <div class="product-info">
+            <span class="product-tag">Taller</span>
+            <h3>Desengrasante rápido</h3>
+            <p>Elimina grasa, aceite y suciedad en piezas metálicas y zonas de trabajo.</p>
+            <div class="product-footer">
+              <span class="price">₡ 10 200</span>
+              <button class="btn-small" data-product="Desengrasante rápido">Cotizar</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="taller">
+          <div class="product-image workshop"></div>
+          <div class="product-info">
+            <span class="product-tag">Reparación</span>
+            <h3>Sellador de radiador</h3>
+            <p>Ayuda a sellar fugas menores en el sistema de refrigeración.</p>
+            <div class="product-footer">
+              <span class="price">₡ 6 800</span>
+              <button class="btn-small" data-product="Sellador de radiador">Cotizar</button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section benefits" id="beneficios">
+    <div class="container">
+      <h2 class="section-title">¿Por qué elegir LIQUI MOLY?</h2>
+
+      <div class="benefit-grid">
+        <div class="benefit">
+          <h3>⚙️ Tecnología alemana</h3>
+          <p>Productos desarrollados para lubricación, limpieza y protección de componentes automotrices.</p>
+        </div>
+
+        <div class="benefit">
+          <h3>🚙 Amplia compatibilidad</h3>
+          <p>Opciones para autos, motocicletas, vehículos diésel, maquinaria, marina y uso industrial.</p>
+        </div>
+
+        <div class="benefit">
+          <h3>🛡️ Protección del motor</h3>
+          <p>Formulaciones orientadas a reducir fricción, desgaste y acumulación de residuos.</p>
+        </div>
+
+        <div class="benefit">
+          <h3>🔧 Solución completa</h3>
+          <p>Desde aceites y aditivos hasta productos de limpieza, reparación y mantenimiento.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section contact" id="contacto">
+    <div class="container contact-grid">
+      <div>
+        <h2 class="section-title">Solicita una cotización</h2>
+        <p>
+          Completa el formulario y te contactaremos con disponibilidad, precios y
+          recomendaciones según tu vehículo o necesidad de taller.
+        </p>
+
+        <ul class="contact-list">
+          <li>📍 Cartago, Costa Rica</li>
+          <li>📞 +506 0000-0000</li>
+          <li>✉️ ventas@tutienda.cr</li>
+          <li>🕒 Lunes a viernes: 8:00 a.m. – 5:00 p.m.</li>
+        </ul>
+      </div>
+
+      <form class="contact-form" id="contactForm">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
+
+        <label for="correo">Correo electrónico</label>
+        <input type="email" id="correo" name="correo" placeholder="tucorreo@ejemplo.com" required>
+
+        <label for="producto">Producto de interés</label>
+        <input type="text" id="producto" name="producto" placeholder="Ejemplo: Top Tec 4200 5W-30" required>
+
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" rows="4" placeholder="Cuéntanos qué necesitas"></textarea>
+
+        <button type="submit" class="btn btn-primary">Enviar solicitud</button>
+        <p class="form-message" id="formMessage"></p>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>© 2026 Tienda LIQUI MOLY. Todos los derechos reservados.</p>
+      <p>LIQUI MOLY es una marca registrada de sus respectivos propietarios.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
