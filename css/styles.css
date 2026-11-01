@@ -555,3 +555,85 @@ h3 {
   align-items: flex-start;
   padding: 24px;
 }
+/* BANNER ROTATIVO */
+.banner-section {
+  padding: 50px 0;
+}
+
+.product-slider {
+  position: relative;
+  min-height: 350px;
+  background: linear-gradient(120deg, #101010, #292929);
+  color: white;
+  border-radius: 15px;
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  overflow: hidden;
+}
+
+.slider-content {
+  max-width: 450px;
+  z-index: 2;
+}
+
+.slider-tag {
+  color: #e32219;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.slider-content h2 {
+  font-size: 32px;
+  margin: 15px 0;
+}
+
+.slider-content p {
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.slider-image img {
+  width: 260px;
+  height: 280px;
+  object-fit: contain;
+}
+
+.slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #e32219;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.slider-arrow.prev {
+  left: 12px;
+}
+
+.slider-arrow.next {
+  right: 12px;
+}
+
+@media (max-width: 768px) {
+  .product-slider {
+    flex-direction: column;
+    text-align: center;
+    padding: 35px 45px;
+  }
+
+  .slider-content h2 {
+    font-size: 25px;
+  }
+
+  .slider-image img {
+    width: 190px;
+    height: 200px;
+  }
+}
