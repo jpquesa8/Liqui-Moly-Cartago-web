@@ -120,80 +120,88 @@
     </section>
 
     <!-- CATEGORÍAS -->
-    <section
-      class="section categories"
-      aria-labelledby="categorias-title"
-    >
-      <div class="container">
-        <h2 class="section-title" id="categorias-title">
-          Categorías principales
-        </h2>
+    /* BANNER ROTATIVO */
+.banner-section {
+  padding: 50px 0;
+}
 
-        <p class="section-subtitle">
-          Explora nuestro catálogo de productos LIQUI MOLY para motor,
-          transmisión, combustible, mantenimiento y taller.
-        </p>
+.product-slider {
+  position: relative;
+  min-height: 350px;
+  background: linear-gradient(120deg, #101010, #292929);
+  color: white;
+  border-radius: 15px;
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  overflow: hidden;
+}
 
-        <div class="category-grid">
+.slider-content {
+  max-width: 450px;
+  z-index: 2;
+}
 
-          <article class="category-card">
-            <div class="category-icon" aria-hidden="true">🛢️</div>
-            <h3>Aceites</h3>
-            <p>
-              Aceites de motor y transmisión para distintas
-              viscosidades y tipos de vehículo.
-            </p>
-          </article>
+.slider-tag {
+  color: #e32219;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
 
-          <article class="category-card">
-            <div class="category-icon" aria-hidden="true">⚗️</div>
-            <h3>Aditivos</h3>
-            <p>
-              Aditivos para combustible, aceite, radiador y
-              limpieza del sistema de inyección.
-            </p>
-          </article>
+.slider-content h2 {
+  font-size: 32px;
+  margin: 15px 0;
+}
 
-          <article class="category-card">
-            <div class="category-icon" aria-hidden="true">🧴</div>
-            <h3>Grasas y pastas</h3>
-            <p>
-              Lubricación especializada para rodamientos, chasis,
-              conexiones y alta temperatura.
-            </p>
-          </article>
+.slider-content p {
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
 
-          <article class="category-card">
-            <div class="category-icon" aria-hidden="true">🚗</div>
-            <h3>Cuidado del vehículo</h3>
-            <p>
-              Limpiadores, siliconas, protectores y productos
-              para plásticos, vidrio y tapicería.
-            </p>
-          </article>
+.slider-image img {
+  width: 260px;
+  height: 280px;
+  object-fit: contain;
+}
 
-          <article class="category-card">
-            <div class="category-icon" aria-hidden="true">🔧</div>
-            <h3>Taller y reparación</h3>
-            <p>
-              Productos de servicio, selladores, desengrasantes
-              y soluciones para mantenimiento.
-            </p>
-          </article>
+.slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #e32219;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
 
-          <article class="category-card">
-            <div class="category-icon" aria-hidden="true">🏍️</div>
-            <h3>Motorbike</h3>
-            <p>
-              Lubricantes y cuidado para motocicletas de
-              2 y 4 tiempos, quads y karts.
-            </p>
-          </article>
+.slider-arrow.prev {
+  left: 12px;
+}
 
-        </div>
-      </div>
-    </section>
+.slider-arrow.next {
+  right: 12px;
+}
 
+@media (max-width: 768px) {
+  .product-slider {
+    flex-direction: column;
+    text-align: center;
+    padding: 35px 45px;
+  }
+
+  .slider-content h2 {
+    font-size: 25px;
+  }
+
+  .slider-image img {
+    width: 190px;
+    height: 200px;
+  }
+}
     <!-- PRODUCTOS -->
     <section
       class="section products"
