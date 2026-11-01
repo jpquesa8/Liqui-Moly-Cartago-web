@@ -1,18 +1,15 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Mike Performance | Soluciones Automotrices</title>
 
   <meta
     name="description"
-    content="Mike Performance: soluciones automotrices y catálogo de lubricantes, aditivos y productos LIQUI MOLY en Cartago, Costa Rica."
+    content="Mike Performance: productos y soluciones automotrices para el cuidado y mantenimiento de tu vehículo."
   >
 
   <link rel="stylesheet" href="css/styles.css">
@@ -22,13 +19,9 @@
 
   <!-- ENCABEZADO -->
   <header class="header">
-    <div class="container header-content">
+    <div class="container header-container">
 
-      <a
-        href="#inicio"
-        class="logo"
-        aria-label="Mike Performance - Inicio"
-      >
+      <a href="#inicio" class="logo" aria-label="Mike Performance - Inicio">
         <img
           src="./mike-performance.jpeg"
           alt="Mike Performance — Soluciones Automotrices"
@@ -37,11 +30,7 @@
         >
       </a>
 
-      <nav
-        class="nav"
-        id="nav"
-        aria-label="Navegación principal"
-      >
+      <nav class="nav" id="nav">
         <a href="#inicio">Inicio</a>
         <a href="#productos">Productos</a>
         <a href="#beneficios">Beneficios</a>
@@ -51,10 +40,9 @@
       <button
         class="menu-btn"
         id="menuBtn"
-        type="button"
         aria-label="Abrir menú"
-        aria-controls="nav"
         aria-expanded="false"
+        type="button"
       >
         ☰
       </button>
@@ -62,558 +50,299 @@
     </div>
   </header>
 
-  <main>
 
-    <!-- PORTADA -->
-    <section class="hero" id="inicio">
-      <div class="container hero-layout">
+  <!-- INICIO -->
+  <section class="hero" id="inicio">
+    <div class="container hero-content">
 
-        <div class="hero-content">
-          <p class="hero-tag">
-            MIKE PERFORMANCE · SOLUCIONES AUTOMOTRICES
+      <span class="hero-badge">Distribuidor de productos automotrices</span>
+
+      <h1>Mike Performance</h1>
+
+      <h2>Soluciones para el cuidado y rendimiento de tu vehículo</h2>
+
+      <p>
+        Descubre productos especializados para el mantenimiento,
+        protección y cuidado automotriz.
+      </p>
+
+      <a href="#productos" class="btn">Explorar productos</a>
+
+      <div class="liqui-moly-badge">
+        <span>Productos</span>
+        <strong>LIQUI MOLY</strong>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- BANNER ROTATIVO DE PRODUCTOS -->
+  <section class="banner-section" id="banner-productos">
+    <div class="container">
+
+      <div class="product-slider" id="productSlider">
+
+        <button
+          class="slider-arrow prev"
+          id="prevProduct"
+          type="button"
+          aria-label="Producto anterior"
+        >
+          &#10094;
+        </button>
+
+        <div class="slider-content">
+
+          <span class="slider-tag">PRODUCTOS DESTACADOS</span>
+
+          <h2 id="sliderTitle">Descubre LIQUI MOLY</h2>
+
+          <p id="sliderDescription">
+            Conoce nuestra selección de productos para el cuidado
+            y mantenimiento de tu vehículo.
           </p>
 
-          <h1>
-            Tu pasión por el motor.
-            <span>Nuestro compromiso.</span>
-          </h1>
+          <a
+            href="#productos"
+            class="btn"
+            id="sliderLink"
+          >
+            Ver productos
+          </a>
 
-          <p class="hero-text">
-            Encuentra lubricantes, aditivos y productos de mantenimiento
-            LIQUI MOLY para el cuidado de tu vehículo.
-          </p>
-
-          <div class="hero-buttons">
-            <a href="#productos" class="btn btn-primary">
-              Explorar catálogo
-            </a>
-
-            <a href="#contacto" class="btn btn-outline">
-              Solicitar cotización
-            </a>
-          </div>
-
-          <div class="brand-partner">
-            <span class="partner-label">
-              Productos de la marca
-            </span>
-
-            <span class="liqui-badge" aria-label="LIQUI MOLY">
-              <span>LIQUI</span>
-              <span>MOLY</span>
-            </span>
-          </div>
         </div>
 
-        <div class="hero-brand">
+        <div class="slider-image">
           <img
-            src="./mike-performance.jpeg"
-            alt="Mike Performance — Soluciones Automotrices"
-            width="1600"
-            height="813"
+            id="sliderImage"
+            src=""
+            alt="Producto destacado LIQUI MOLY"
           >
-
-          <p>Pasión por el rendimiento.</p>
         </div>
 
-      </div>
-    </section>
-
-    <!-- CATEGORÍAS -->
-    /* BANNER ROTATIVO */
-.banner-section {
-  padding: 50px 0;
-}
-
-.product-slider {
-  position: relative;
-  min-height: 350px;
-  background: linear-gradient(120deg, #101010, #292929);
-  color: white;
-  border-radius: 15px;
-  padding: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  overflow: hidden;
-}
-
-.slider-content {
-  max-width: 450px;
-  z-index: 2;
-}
-
-.slider-tag {
-  color: #e32219;
-  font-weight: bold;
-  letter-spacing: 2px;
-}
-
-.slider-content h2 {
-  font-size: 32px;
-  margin: 15px 0;
-}
-
-.slider-content p {
-  line-height: 1.6;
-  margin-bottom: 25px;
-}
-
-.slider-image img {
-  width: 260px;
-  height: 280px;
-  object-fit: contain;
-}
-
-.slider-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: #e32219;
-  color: white;
-  border: none;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  cursor: pointer;
-}
-
-.slider-arrow.prev {
-  left: 12px;
-}
-
-.slider-arrow.next {
-  right: 12px;
-}
-
-@media (max-width: 768px) {
-  .product-slider {
-    flex-direction: column;
-    text-align: center;
-    padding: 35px 45px;
-  }
-
-  .slider-content h2 {
-    font-size: 25px;
-  }
-
-  .slider-image img {
-    width: 190px;
-    height: 200px;
-  }
-}
-    <!-- PRODUCTOS -->
-    <section
-      class="section products"
-      id="productos"
-      aria-labelledby="productos-title"
-    >
-      <div class="container">
-        <h2 class="section-title" id="productos-title">
-          Productos destacados
-        </h2>
-
-        <p class="section-subtitle">
-          Filtra por categoría para encontrar el producto que necesitas.
-          Consulta disponibilidad y precio antes de realizar tu compra.
-        </p>
-
-        <div
-          class="filters"
-          role="group"
-          aria-label="Filtrar productos por categoría"
+        <button
+          class="slider-arrow next"
+          id="nextProduct"
+          type="button"
+          aria-label="Producto siguiente"
         >
-          <button
-            type="button"
-            class="filter-btn active"
-            data-filter="todos"
-            aria-pressed="true"
-          >
-            Todos
-          </button>
+          &#10095;
+        </button>
 
-          <button
-            type="button"
-            class="filter-btn"
-            data-filter="aceites"
-            aria-pressed="false"
-          >
-            Aceites
-          </button>
-
-          <button
-            type="button"
-            class="filter-btn"
-            data-filter="aditivos"
-            aria-pressed="false"
-          >
-            Aditivos
-          </button>
-
-          <button
-            type="button"
-            class="filter-btn"
-            data-filter="grasas"
-            aria-pressed="false"
-          >
-            Grasas
-          </button>
-
-          <button
-            type="button"
-            class="filter-btn"
-            data-filter="cuidado"
-            aria-pressed="false"
-          >
-            Cuidado
-          </button>
-
-          <button
-            type="button"
-            class="filter-btn"
-            data-filter="taller"
-            aria-pressed="false"
-          >
-            Taller
-          </button>
-        </div>
-
-        <div class="product-grid" id="productGrid">
-
-          <!-- PRODUCTO 1 -->
-          <article class="product-card" data-category="aceites">
-            <div class="product-image oil" aria-hidden="true"></div>
-
-            <div class="product-info">
-              <span class="product-tag">Aceite de motor</span>
-
-              <h3>Top Tec 4200 5W-30</h3>
-
-              <p>
-                Aceite sintético de alta tecnología para motores
-                modernos de gasolina y diésel.
-              </p>
-
-              <div class="product-footer">
-                <span class="price">₡ 28 500</span>
-
-                <button
-                  type="button"
-                  class="btn-small"
-                  data-product="Top Tec 4200 5W-30"
-                  aria-label="Cotizar Top Tec 4200 5W-30"
-                >
-                  Cotizar
-                </button>
-              </div>
-            </div>
-          </article>
-
-          <!-- PRODUCTO 2 -->
-          <article class="product-card" data-category="aceites">
-            <div class="product-image oil" aria-hidden="true"></div>
-
-            <div class="product-info">
-              <span class="product-tag">Aceite de motor</span>
-
-              <h3>Molygen New Generation 5W-40</h3>
-
-              <p>
-                Aceite sintético con tecnología MOLYGEN para
-                reducir fricción y desgaste.
-              </p>
-
-              <div class="product-footer">
-                <span class="price">₡ 31 900</span>
-
-                <button
-                  type="button"
-                  class="btn-small"
-                  data-product="Molygen New Generation 5W-40"
-                  aria-label="Cotizar Molygen New Generation 5W-40"
-                >
-                  Cotizar
-                </button>
-              </div>
-            </div>
-          </article>
-
-          <!-- PRODUCTO 3 -->
-          <article class="product-card" data-category="aditivos">
-            <div class="product-image additive" aria-hidden="true"></div>
-
-            <div class="product-info">
-              <span class="product-tag">Aditivo</span>
-
-              <h3>MoS2 Shooter</h3>
-
-              <p>
-                Aditivo con bisulfuro de molibdeno para reducir
-                la fricción y proteger el motor.
-              </p>
-
-              <div class="product-footer">
-                <span class="price">₡ 12 750</span>
-
-                <button
-                  type="button"
-                  class="btn-small"
-                  data-product="MoS2 Shooter"
-                  aria-label="Cotizar MoS2 Shooter"
-                >
-                  Cotizar
-                </button>
-              </div>
-            </div>
-          </article>
-
-          <!-- PRODUCTO 4 -->
-          <article class="product-card" data-category="aditivos">
-            <div class="product-image additive" aria-hidden="true"></div>
-
-            <div class="product-info">
-              <span class="product-tag">Combustible</span>
-
-              <h3>Limpiador de inyección</h3>
-
-              <p>
-                Ayuda a limpiar el sistema de inyección y
-                mantener el rendimiento del motor.
-              </p>
-
-              <div class="product-footer">
-                <span class="price">₡ 9 990</span>
-
-                <button
-                  type="button"
-                  class="btn-small"
-                  data-product="Limpiador de inyección"
-                  aria-label="Cotizar Limpiador de inyección"
-                >
-                  Cotizar
-                </button>
-              </div>
-            </div>
-          </article>
-
-          <!-- PRODUCTO 5 -->
-          <article class="product-card" data-category="grasas">
-            <div class="product-image grease" aria-hidden="true"></div>
-
-            <div class="product-info">
-              <span class="product-tag">Grasa</span>
-
-              <h3>Grasa multiusos</h3>
-
-              <p>
-                Grasa lubricante para uso general en chasis,
-                rodamientos y conexiones.
-              </p>
-
-              <div class="product-footer">
-                <span class="price">₡ 8 450</span>
-
-                <button
-                  type="button"
-                  class="btn-small"
-                  data-product="Grasa multiusos"
-                  aria-label="Cotizar Grasa multiusos"
-                >
-                  Cotizar
-                </button>
-              </div>
-            </div>
-          </article>
-
-          <!-- PRODUCTO 6 -->
-          <article class="product-card" data-category="cuidado">
-            <div class="product-image care" aria-hidden="true"></div>
-
-            <div class="product-info">
-              <span class="product-tag">Cuidado</span>
-
-              <h3>Limpiador de plásticos</h3>
-
-              <p>
-                Limpia y renueva superficies plásticas del
-                interior y exterior del vehículo.
-              </p>
-
-              <div class="product-footer">
-                <span class="price">₡ 7 300</span>
-
-                <button
-                  type="button"
-                  class="btn-small"
-                  data-product="Limpiador de plásticos"
-                  aria-label="Cotizar Limpiador de plásticos"
-                >
-                  Cotizar
-                </button>
-              </div>
-            </div>
-          </article>
-
-          <!-- PRODUCTO 7 -->
-          <article class="product-card" data-category="taller">
-            <div class="product-image workshop" aria-hidden="true"></div>
-
-            <div class="product-info">
-              <span class="product-tag">Taller</span>
-
-              <h3>Desengrasante rápido</h3>
-
-              <p>
-                Elimina grasa, aceite y suciedad en piezas
-                metálicas y zonas de trabajo.
-              </p>
-
-              <div class="product-footer">
-                <span class="price">₡ 10 200</span>
-
-                <button
-                  type="button"
-                  class="btn-small"
-                  data-product="Desengrasante rápido"
-                  aria-label="Cotizar Desengrasante rápido"
-                >
-                  Cotizar
-                </button>
-              </div>
-            </div>
-          </article>
-
-          <!-- PRODUCTO 8 -->
-          <article class="product-card" data-category="taller">
-            <div class="product-image workshop" aria-hidden="true"></div>
-
-            <div class="product-info">
-              <span class="product-tag">Reparación</span>
-
-              <h3>Sellador de radiador</h3>
-
-              <p>
-                Ayuda a sellar fugas menores en el sistema
-                de refrigeración.
-              </p>
-
-              <div class="product-footer">
-                <span class="price">₡ 6 800</span>
-
-                <button
-                  type="button"
-                  class="btn-small"
-                  data-product="Sellador de radiador"
-                  aria-label="Cotizar Sellador de radiador"
-                >
-                  Cotizar
-                </button>
-              </div>
-            </div>
-          </article>
-
-        </div>
       </div>
-    </section>
 
-    <!-- BENEFICIOS -->
-    <section
-      class="section benefits"
-      id="beneficios"
-      aria-labelledby="beneficios-title"
-    >
-      <div class="container">
-        <h2 class="section-title" id="beneficios-title">
-          Productos LIQUI MOLY en Mike Performance
-        </h2>
+    </div>
+  </section>
 
-        <p class="section-subtitle">
-          Explora las opciones de lubricación, cuidado y mantenimiento
-          de nuestro catálogo.
+
+  <!-- PRODUCTOS -->
+  <section class="products-section" id="productos">
+    <div class="container">
+
+      <div class="section-header">
+        <span class="section-tag">CATÁLOGO</span>
+        <h2>Nuestros productos</h2>
+        <p>
+          Encuentra soluciones para diferentes necesidades
+          de mantenimiento y cuidado automotriz.
         </p>
-
-        <div class="benefit-grid">
-
-          <div class="benefit">
-            <h3>⚙️ Tecnología alemana</h3>
-            <p>
-              Productos desarrollados para lubricación, limpieza
-              y protección de componentes automotrices.
-            </p>
-          </div>
-
-          <div class="benefit">
-            <h3>🚙 Distintas aplicaciones</h3>
-            <p>
-              Consulta las opciones del catálogo y verifica la
-              compatibilidad con las especificaciones de tu vehículo.
-            </p>
-          </div>
-
-          <div class="benefit">
-            <h3>🛡️ Cuidado del motor</h3>
-            <p>
-              Aceites y aditivos para incorporar al mantenimiento
-              según las indicaciones de cada producto.
-            </p>
-          </div>
-
-          <div class="benefit">
-            <h3>🔧 Mantenimiento</h3>
-            <p>
-              Desde aceites y aditivos hasta productos de
-              limpieza, reparación y cuidado del vehículo.
-            </p>
-          </div>
-
-        </div>
       </div>
-    </section>
 
-    <!-- CONTACTO -->
-    <section
-      class="section contact"
-      id="contacto"
-      aria-labelledby="contacto-title"
-    >
-      <div class="container contact-grid">
+      <!-- FILTROS -->
+      <div class="filters">
 
-        <div>
-          <h2 class="section-title" id="contacto-title">
-            Consulta por tu producto
-          </h2>
+        <button class="filter-btn active" data-filter="todos" type="button">
+          Todos
+        </button>
 
-          <p>
-            Selecciona un producto del catálogo para completar
-            el campo de interés.
-          </p>
+        <button class="filter-btn" data-filter="aceites" type="button">
+          Aceites
+        </button>
 
-          <p id="formNotice">
-            El formulario está en modo demostración:
-            todavía no envía solicitudes.
-          </p>
+        <button class="filter-btn" data-filter="aditivos" type="button">
+          Aditivos
+        </button>
 
-          <!-- Reemplaza estos datos de ejemplo antes de publicar. -->
-          <ul class="contact-list">
-            <li>📍 Cartago, Costa Rica</li>
-            <li>📞 Teléfono: pendiente de actualizar</li>
-            <li>✉️ Correo: pendiente de actualizar</li>
-            <li>🕒 Horario: pendiente de confirmar</li>
-          </ul>
+        <button class="filter-btn" data-filter="grasas" type="button">
+          Grasas
+        </button>
+
+        <button class="filter-btn" data-filter="cuidado" type="button">
+          Cuidado
+        </button>
+
+        <button class="filter-btn" data-filter="taller" type="button">
+          Taller
+        </button>
+
+      </div>
+
+
+      <!-- TARJETAS DE PRODUCTOS -->
+      <div class="products-grid">
+
+        <article class="product-card" data-category="aceites">
+          <div class="product-info">
+            <span class="product-category">Aceites</span>
+            <h3>Top Tec 4200 5W-30</h3>
+            <p>Aceite de motor de alto rendimiento.</p>
+            <strong class="product-price">₡28,500</strong>
+            <button class="btn product-btn" data-product="Top Tec 4200 5W-30" type="button">
+              Consultar
+            </button>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="aceites">
+          <div class="product-info">
+            <span class="product-category">Aceites</span>
+            <h3>Molygen New Generation 5W-40</h3>
+            <p>Aceite diseñado para proteger el motor.</p>
+            <strong class="product-price">₡31,900</strong>
+            <button class="btn product-btn" data-product="Molygen New Generation 5W-40" type="button">
+              Consultar
+            </button>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="aditivos">
+          <div class="product-info">
+            <span class="product-category">Aditivos</span>
+            <h3>MoS2 Shooter</h3>
+            <p>Aditivo para ayudar a reducir la fricción.</p>
+            <strong class="product-price">₡12,750</strong>
+            <button class="btn product-btn" data-product="MoS2 Shooter" type="button">
+              Consultar
+            </button>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="aditivos">
+          <div class="product-info">
+            <span class="product-category">Aditivos</span>
+            <h3>Limpiador de inyección</h3>
+            <p>Producto para el mantenimiento del sistema de combustible.</p>
+            <strong class="product-price">₡9,990</strong>
+            <button class="btn product-btn" data-product="Limpiador de inyección" type="button">
+              Consultar
+            </button>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="grasas">
+          <div class="product-info">
+            <span class="product-category">Grasas</span>
+            <h3>Grasa multiusos</h3>
+            <p>Solución para diferentes aplicaciones de lubricación.</p>
+            <strong class="product-price">₡8,450</strong>
+            <button class="btn product-btn" data-product="Grasa multiusos" type="button">
+              Consultar
+            </button>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="cuidado">
+          <div class="product-info">
+            <span class="product-category">Cuidado</span>
+            <h3>Limpiador de plásticos</h3>
+            <p>Para el cuidado de superficies plásticas del vehículo.</p>
+            <strong class="product-price">₡7,300</strong>
+            <button class="btn product-btn" data-product="Limpiador de plásticos" type="button">
+              Consultar
+            </button>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="taller">
+          <div class="product-info">
+            <span class="product-category">Taller</span>
+            <h3>Desengrasante rápido</h3>
+            <p>Producto para labores de limpieza y mantenimiento.</p>
+            <strong class="product-price">₡10,200</strong>
+            <button class="btn product-btn" data-product="Desengrasante rápido" type="button">
+              Consultar
+            </button>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="taller">
+          <div class="product-info">
+            <span class="product-category">Taller</span>
+            <h3>Sellador de radiador</h3>
+            <p>Producto para el mantenimiento del sistema de refrigeración.</p>
+            <strong class="product-price">₡6,800</strong>
+            <button class="btn product-btn" data-product="Sellador de radiador" type="button">
+              Consultar
+            </button>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- BENEFICIOS -->
+  <section class="benefits-section" id="beneficios">
+    <div class="container">
+
+      <div class="section-header">
+        <span class="section-tag">¿POR QUÉ ELEGIRNOS?</span>
+        <h2>Comprometidos con tu vehículo</h2>
+      </div>
+
+      <div class="benefits-grid">
+
+        <div class="benefit-card">
+          <h3>Calidad</h3>
+          <p>Productos especializados para el mantenimiento automotriz.</p>
         </div>
 
-        <form
-          class="contact-form"
-          id="contactForm"
-          aria-describedby="formNotice"
-        >
+        <div class="benefit-card">
+          <h3>Variedad</h3>
+          <p>Opciones para diferentes necesidades de cuidado y protección.</p>
+        </div>
+
+        <div class="benefit-card">
+          <h3>Atención</h3>
+          <p>Asesoría para ayudarte a encontrar el producto adecuado.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- CONTACTO -->
+  <section class="contact-section" id="contacto">
+    <div class="container">
+
+      <div class="section-header">
+        <span class="section-tag">CONTÁCTANOS</span>
+        <h2>¿Necesitas información?</h2>
+        <p>Escríbenos para consultar sobre nuestros productos.</p>
+      </div>
+
+      <div class="contact-content">
+
+        <div class="contact-info">
+          <h3>Mike Performance</h3>
+          <p>Soluciones automotrices para tu vehículo.</p>
+          <p><strong>Teléfono:</strong> Próximamente</p>
+          <p><strong>Correo:</strong> Próximamente</p>
+          <p><strong>Horario:</strong> Consultar disponibilidad</p>
+        </div>
+
+        <form id="contactForm">
+
           <label for="nombre">Nombre</label>
           <input
             type="text"
             id="nombre"
             name="nombre"
-            placeholder="Tu nombre completo"
-            autocomplete="name"
+            placeholder="Tu nombre"
             required
           >
 
@@ -622,8 +351,7 @@
             type="email"
             id="correo"
             name="correo"
-            placeholder="tucorreo@ejemplo.com"
-            autocomplete="email"
+            placeholder="Tu correo electrónico"
             required
           >
 
@@ -632,55 +360,44 @@
             type="text"
             id="producto"
             name="producto"
-            placeholder="Ejemplo: Top Tec 4200 5W-30"
-            required
+            placeholder="Producto que deseas consultar"
           >
 
           <label for="mensaje">Mensaje</label>
           <textarea
             id="mensaje"
             name="mensaje"
-            rows="4"
-            placeholder="Cuéntanos qué necesitas"
+            rows="5"
+            placeholder="Escribe tu consulta"
+            required
           ></textarea>
 
-          <button type="submit" class="btn btn-primary">
-            Probar formulario
+          <button type="submit" class="btn">
+            Enviar consulta
           </button>
 
-          <p
-            class="form-message"
-            id="formMessage"
-            role="status"
-            aria-live="polite"
-          ></p>
+          <p id="formMessage" aria-live="polite"></p>
+
         </form>
 
       </div>
-    </section>
+    </div>
+  </section>
 
-  </main>
 
   <!-- PIE DE PÁGINA -->
   <footer class="footer">
-    <div class="container footer-content">
-
-      <div>
-        <p class="footer-brand">MIKE PERFORMANCE</p>
-        <p>Soluciones automotrices · Cartago, Costa Rica</p>
-      </div>
-
-      <div>
-        <p>© 2026 Mike Performance.</p>
-        <p>
-          LIQUI MOLY es una marca de sus respectivos propietarios.
-        </p>
-      </div>
-
+    <div class="container">
+      <p>
+        © 2026 Mike Performance. Todos los derechos reservados.
+      </p>
     </div>
   </footer>
 
+
+  <!-- JAVASCRIPT -->
   <script src="js/script.js"></script>
 
 </body>
 </html>
+
