@@ -51,3 +51,39 @@ contactForm.addEventListener("submit", event => {
 
   contactForm.reset();
 });
+// BANNER ROTATIVO DE PRODUCTOS
+
+const sliderProducts = [
+  {
+    name: "Octane Booster 21610",
+    description: "Aditivo potenciador del índice de octano para motores de gasolina.",
+    image: "https://www.capris.cr/media/catalog/product/cache/2f6b2b7ee41e3a231a46fe73c1b96633/a/d/aditivo-potenciador-del-indice-de-octano-para-motores-deportivos-200ml-liqui-moly-21610-octane-booster-527145.webp",
+    link: "https://www.capris.cr/es/liqui-moly-21610-octane-booster-aditivo-potenciador-del-indice-de-octano-para-motores-deportivos-200ml-527145.html"
+  }
+];
+
+let currentSlide = 0;
+
+function showSlide(index) {
+  const product = sliderProducts[index];
+
+  document.getElementById("sliderTitle").textContent = product.name;
+  document.getElementById("sliderDescription").textContent = product.description;
+  document.getElementById("sliderImage").src = product.image;
+  document.getElementById("sliderLink").href = product.link;
+}
+
+document.getElementById("nextSlide").addEventListener("click", () => {
+  currentSlide = (currentSlide + 1) % sliderProducts.length;
+  showSlide(currentSlide);
+});
+
+document.getElementById("prevSlide").addEventListener("click", () => {
+  currentSlide = (currentSlide - 1 + sliderProducts.length) % sliderProducts.length;
+  showSlide(currentSlide);
+});
+
+setInterval(() => {
+  currentSlide = (currentSlide + 1) % sliderProducts.length;
+  showSlide(currentSlide);
+}, 5000);
